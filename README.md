@@ -1,4 +1,4 @@
-# Ai_Career_Councelling-CareerPilot
+# Ai_Career_Counceling-CareerPilot
 Project by BugBusters
 
 
