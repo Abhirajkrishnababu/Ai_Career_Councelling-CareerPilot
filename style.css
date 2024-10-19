@@ -13,6 +13,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
+    position: relative; /* Added for positioning elements */
 }
 
 /* Company name with gradient */
@@ -23,7 +25,9 @@ body {
     background: linear-gradient(to right, #ff0000, #ffa500, #ffff00, #008000, #0000ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
+    margin-bottom: 60px; /* Increased margin to move downward */
+    position: relative;
+    top: 20px; /* Further pushes the company name down */
 }
 
 /* Button container for centering */
@@ -31,7 +35,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 40px; /* Moved downward */
+    position: relative;
+    top: 100px; /* Fine-tuned the button position */
 }
 
 /* Button styling */
@@ -41,10 +47,24 @@ body {
     border: none;
     padding: 15px 30px;
     font-size: 18px;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    border-radius: 50px;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative; /* Position for ripple effect */
+}
+
+@media (max-width: 768px) {
+    .company-name {
+        font-size: 36px; 
+        margin-bottom: 40px;
+    }
+
+    .test-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
 }
 
 /* Hover effect with glowing pulse animation */
@@ -80,5 +100,24 @@ body {
     text-align: center;
     color: #fff;
     margin-top: auto;
-    padding: 10px;
+    padding: 20px;
+}
+
+/* Description styling */
+.description {
+    margin-left: 50px; /* Moved description to the left */
+    margin-top: 50px; /* Moved description downward */
+    max-width: 800px;
+    color: white;
+    font-family: 'Georgia', serif; /* More elegant font style */
+    font-size: 18px; /* Increased font size for better readability */
+}
+  
+.description p {
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #e0e0e0; /* Softer text color */
+    font-style: italic; /* Added italic style for elegance */
 }
